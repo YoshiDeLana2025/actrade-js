@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animal Crossing Code Project — Index</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 16px; color: #111; }
+    main { max-width: 1000px; margin: 0 auto; }
+    .link-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:12px; }
+    .link-card { padding:14px; border:1px solid #ddd; border-radius:8px; background:#fafafa; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    .link-card a { font-weight:600; color:#0b66c3; text-decoration:none; }
+    .link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
+    header small { display:block; color:#666; margin-top:6px; }
+    footer { margin-top:18px; color:#666; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Animal Crossing Code Project</h1>
+      <small>Static client-side version — all pages run in the browser (no PHP required).</small>
+    </header>
+
+    <section class="link-grid">
+      <div class="link-card">
+        <a href="./itemlisting.html" target="_blank">Item list</a>
+        <p>Searchable list of known items (basic view).</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./itemlistingp.html" target="_blank">Item list+</a>
+        <p>Item list with Notes column (shows special notes, glitch/nothing markers).</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./alllisting.html" target="_blank">All item list</a>
+        <p>All known items (same data, different presentation).</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./alllistingp.html" target="_blank">All item list+</a>
+        <p>All known items + notes (glitch/nothing/special) displayed inline.</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./batchgen.html" target="_blank">Batch-Gen</a>
+        <p>Generates Nintendo and Nintendo Power Universal codes for items (preview limited for performance).</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./batchsearch.html" target="_blank">Batch-Search</a>
+        <p>Generate codes for a range of offsets (start offset + number of results).</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./bytatchgen.html" target="_blank">Bytatch (Byte sweep)</a>
+        <p>Generates codes by varying byte 1 or byte 2 for a given item/player/town.</p>
+      </div>
+
+      <div class="link-card">
+        <a href="./index.html" target="_blank">Generator & Decoder (SPA)</a>
+        <p>If you preserved the single-page generator/decoder UI in index.html earlier, open it to access the interactive generator and decoder. (If you want me to split it into separate generator.html and decoder.html, I can do that.)</p>
+      </div>
+    </section>
+
+    <footer>
+      Note: These pages expect the following files to be present in the same folder:
+      <ul>
+        <li>items.js (full item list)</li>
+        <li>nothinglist.js, glitchlist.js, speciallist.js (helper lists)</li>
+        <li>app.js (algorithm port)</li>
+        <li>styles.css and the individual HTML pages (itemlisting.html, itemlistingp.html, alllisting.html, alllistingp.html, batchgen.html, batchsearch.html, bytatchgen.html)</li>
+      </ul>
+    </footer>
+  </main>
+</body>
+</html>

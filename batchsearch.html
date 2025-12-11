@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Batch-Search</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Batch-Search</h1>
+    <p>Generate codes for a range of item numbers (start + results).</p>
+    <form id="form">
+      <label>Offset (decimal or hex like 0x1234): <input name="soffset" /></label>
+      <label>Results: <input name="results" type="number" value="100" /></label>
+      <label><input name="printable" type="checkbox" /> Printable version</label>
+      <button type="submit">Generate</button>
+    </form>
+    <div id="output"></div>
+  </main>
+
+  <script src="items.js"></script>
+  <script src="app.js" type="module"></script>
+  <script>
+    function all2int(value) {
+      if (!value) return 0;
+      if (typeof value === 'number') return value;
+      if (value.toString().toLowerCase().startsWith('0x')) return parseInt(value.slice(2), 16);
+      const n = parseInt(value, 10);
+      return isNaN(n) ? 0 : n;
+    }
+    document.getElementById('form').addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const fd = new FormData(ev.target);
+      let soff = all2int(fd.get('soffset'));
+      let results = parseInt(fd.get('results')) || 100;
+      const printable = !!fd.get('printable');
+      if (soff < 0) soff = 0;
+      if (soff > 0xFFFF) { soff = 0xFFFF - 100; results = 100; }
+      if (results < 1) results = 100;
+      if (results > 0xFFFF - soff) results = 0xFFFF - soff;
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+      for (let idx = 0; idx < results; idx++) {
+        const key = soff + idx;
+        const keyHex = '0x' + key.toString(16).padStart(4,'0');
+        const itemName = window.AC_ITEMS[keyHex] || '???';
+        const nintendo = window.ACTrade.createPassword("", "Nintendo", key, "U", false, "");
+        const nintendoPower = window.ACTrade.createPassword("Power", "Nintendo", key, "U", true, "");
+        if (!printable) {
+          const tr = document.createElement('div');
+          tr.style.border = '1px solid #eee';
+          tr.style.padding = '6px';
+          tr.style.margin = '3px 0';
+          tr.innerHTML = `<b>${key} / ${keyHex}</b> — ${itemName}<br><b>Nintendo:</b> <code>${nintendo}</code><br><b>Nintendo Power:</b> <code>${nintendoPower}</code>`;
+          output.appendChild(tr);
+        } else {
+          // printable simple block
+          const block = document.createElement('pre');
+          block.textContent = `Item: ${itemName}\nNumber: ${keyHex} (${key})\nNintendo\n${nintendo}\nNintendo Power\n${nintendoPower}\n\n`;
+          output.appendChild(block);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Batch-Gen</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Batch-Gen</h1>
+    <p>Generate Nintendo & Nintendo Power Universal codes for every known item.</p>
+    <label>Filter: <input id="filter" placeholder="Search name or hex" /></label>
+    <button id="generate-all">Generate All (show limited preview)</button>
+    <div id="results"></div>
+  </main>
+
+  <script src="items.js"></script>
+  <script src="app.js" type="module"></script>
+  <script>
+    function hexToDec(h) { return parseInt(h, 16); }
+    document.getElementById('generate-all').addEventListener('click', async () => {
+      const results = document.getElementById('results');
+      results.innerHTML = '';
+      const filter = (document.getElementById('filter').value || '').toLowerCase();
+      const keys = Object.keys(window.AC_ITEMS || {});
+      keys.sort((a,b) => hexToDec(a) - hexToDec(b));
+      // limit preview to first 200 entries to avoid UI overload
+      const limit = 200;
+      let count = 0;
+      for (const k of keys) {
+        const name = window.AC_ITEMS[k];
+        if (filter && !(k.toLowerCase().includes(filter) || name.toLowerCase().includes(filter))) continue;
+        if (count++ >= limit) break;
+        const itemnum = hexToDec(k);
+        // Nintendo code: player="", town="Nintendo", codetype="U", leadspace=false
+        const nintendo = window.ACTrade.createPassword("", "Nintendo", itemnum, "U", false, "");
+        // Nintendo Power code variant: player="Power", town="Nintendo", leadspace=true
+        const nintendoPower = window.ACTrade.createPassword("Power", "Nintendo", itemnum, "U", true, "");
+        const box = document.createElement('div');
+        box.style.border = '1px solid #ddd';
+        box.style.padding = '6px';
+        box.style.margin = '6px 0';
+        box.innerHTML = `<b>${k} (${itemnum}) - ${name}</b><br><b>Nintendo:</b> <code>${nintendo}</code><br><b>Nintendo Power:</b> <code>${nintendoPower}</code>`;
+        results.appendChild(box);
+      }
+      if (count === 0) results.textContent = 'No matching items.';
+    });
+  </script>
+</body>
+</html>

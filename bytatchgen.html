@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bytatch</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Bytatch</h1>
+    <p>Create codes by varying byte1 or byte2 over 0..255.</p>
+    <form id="form">
+      <label>Item number (dec or 0x...): <input name="itemnum" /></label>
+      <label>Player name: <input name="playername" maxlength="8" /></label>
+      <label>Town name: <input name="townname" maxlength="8" /></label>
+      <label>Constant byte (hex like 0xFF or decimal): <input name="cbyte" /></label>
+      <label>Changer:
+        <select name="changer">
+          <option value="1">Byte 1</option>
+          <option value="2">Byte 2</option>
+        </select>
+      </label>
+      <label><input type="checkbox" name="leadspace" /> Add leading space</label>
+      <button type="submit">Generate</button>
+    </form>
+    <div id="output"></div>
+  </main>
+
+  <script src="items.js"></script>
+  <script src="app.js" type="module"></script>
+  <script>
+    function all2int(value) {
+      if (!value) return 0;
+      const s = value.toString();
+      if (s.toLowerCase().startsWith('0x')) return parseInt(s.slice(2), 16);
+      const n = parseInt(s, 10);
+      return isNaN(n) ? 0 : n;
+    }
+    document.getElementById('form').addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const fd = new FormData(ev.target);
+      const itemnum = all2int(fd.get('itemnum'));
+      const playername = fd.get('playername') || '';
+      const townname = fd.get('townname') || '';
+      const cbyte = all2int(fd.get('cbyte'));
+      const changer = parseInt(fd.get('changer')) || 1;
+      const leadspace = !!fd.get('leadspace');
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+      if (!itemnum) { output.textContent = 'Item number is missing or invalid.'; return; }
+      const itemName = window.AC_ITEMS['0x' + itemnum.toString(16).padStart(4,'0')] || 'Unknown';
+      const table = document.createElement('table');
+      table.style.width = '90%';
+      table.style.background = '#CECECE';
+      const header = document.createElement('tr');
+      header.style.background = '#EAEAEA';
+      header.innerHTML = '<th>Byte 1</th><th>Byte 2</th><th>Codes</th>';
+      table.appendChild(header);
+      // loop 0..255
+      for (let idx = 0; idx < 256; idx++) {
+        let byte1 = cbyte, byte2 = cbyte;
+        if (changer === 1) byte1 = idx; else byte2 = idx;
+        const code = window.ACTrade.createPasswordFromByte(playername, townname, itemnum, leadspace, byte1, byte2);
+        const tr = document.createElement('tr');
+        tr.style.background = '#FFFFFF';
+        const b1h = '0x' + (byte1 & 0xFF).toString(16).padStart(2,'0');
+        const b2h = '0x' + (byte2 & 0xFF).toString(16).padStart(2,'0');
+        tr.innerHTML = `<td>${b1h}</td><td>${b2h}</td><td><code style="font-size:10px">${code}</code></td>`;
+        table.appendChild(tr);
+      }
+      output.appendChild(document.createElement('h3')).textContent = `${itemName} (${itemnum})`;
+      output.appendChild(table);
+    });
+  </script>
+</body>
+</html>
