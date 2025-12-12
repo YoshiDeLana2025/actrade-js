@@ -52,9 +52,9 @@
         if (out.error) { result.textContent = out.error; return; }
         // Format output similar to original: display split after 14 chars
         const final = out.finalCode;
-        const displayed = final.slice(0,14) + '\\n' + final.slice(14);
-        let txt = 'Trade Code:\\n' + displayed + '\\n\\n';
-        txt += 'Raw (28 chars):\\n' + out.raw28 + '\\n';
+        const displayed = final.slice(0,14) + '\n' + final.slice(14);
+        let txt = 'Trade Code:\n' + displayed + '\n\n';
+        txt += 'Raw (28 chars):\n' + out.raw28 + '\n';
         result.textContent = txt;
       } catch (err) {
         result.textContent = 'Error generating: ' + err;
