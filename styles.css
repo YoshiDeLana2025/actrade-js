@@ -56,4 +56,8 @@ main { max-width:1000px; margin:8px auto; }
 header small { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; display:block; color:#666; margin-top:6px; }
 header p { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; color:#666; font-size:0.9rem; }
 footer { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
-  
+.note-glitch { color: #b45f00; font-weight: bold; }
+.note-nothing { color: #7a7a7a; font-style: italic; }
+.note-special { color: #0b5; }
+table { border-collapse: collapse; }
+table th, table td { padding: 6px; border: 1px solid #ddd; }
