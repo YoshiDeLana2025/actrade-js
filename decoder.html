@@ -36,21 +36,21 @@
         }
         const itemname = window.ac_itemlist[res.itemnum] || '???';
         let txt = '';
-        txt += 'Original code:\\n' + res.original_code + '\\n\\n';
-        txt += 'Item Number: 0x' + res.itemnum.toString(16).padStart(4,'0') + '\\n';
-        txt += 'Code Byte 0: 0x' + res.codebyte0.toString(16).padStart(2,'0') + '\\n';
-        txt += 'Code Byte 1: 0x' + res.codebyte1.toString(16).padStart(2,'0') + '\\n';
-        txt += ' - Code Descriptor 0: 0x' + (res.modbyte0===undefined? '': res.modbyte0.toString(16).padStart(2,'0')) + '\\n';
-        txt += ' - Code Descriptor 1: 0x' + (res.modbyte1===undefined? '': res.modbyte1.toString(16).padStart(2,'0')) + '\\n';
-        txt += ' - Code Descriptor 2: 0x' + (res.modbyte2===undefined? '': res.modbyte2.toString(16).padStart(2,'0')) + '\\n';
-        txt += ' - Code Descriptor 3: 0x' + (res.modbyte3===undefined? '': res.modbyte3.toString(16).padStart(2,'0')) + '\\n';
-        txt += ' - Code Descriptor 4: 0x' + (res.modbyte4===undefined? '': res.modbyte4.toString(16).padStart(2,'0')) + '\\n\\n';
-        txt += 'Town name: ' + res.townname + '\\n';
-        txt += 'Player name: ' + res.playername + '\\n\\n';
-        txt += 'Item name: ' + itemname + '\\n\\n';
-        txt += 'Code type: ' + res.passtype + '\\n\\n';
-        txt += 'Output data hex:\\n';
-        txt += res.data.map(x => x.toString(16).padStart(2,'0')).join(' ') + '\\n';
+        txt += 'Original code:\n' + res.original_code + '\n\n';
+        txt += 'Item Number: 0x' + res.itemnum.toString(16).padStart(4,'0') + '\n';
+        txt += 'Code Byte 0: 0x' + res.codebyte0.toString(16).padStart(2,'0') + '\n';
+        txt += 'Code Byte 1: 0x' + res.codebyte1.toString(16).padStart(2,'0') + '\n';
+        txt += ' - Code Descriptor 0: 0x' + (res.modbyte0===undefined? '': res.modbyte0.toString(16).padStart(2,'0')) + '\n';
+        txt += ' - Code Descriptor 1: 0x' + (res.modbyte1===undefined? '': res.modbyte1.toString(16).padStart(2,'0')) + '\n';
+        txt += ' - Code Descriptor 2: 0x' + (res.modbyte2===undefined? '': res.modbyte2.toString(16).padStart(2,'0')) + '\n';
+        txt += ' - Code Descriptor 3: 0x' + (res.modbyte3===undefined? '': res.modbyte3.toString(16).padStart(2,'0')) + '\n';
+        txt += ' - Code Descriptor 4: 0x' + (res.modbyte4===undefined? '': res.modbyte4.toString(16).padStart(2,'0')) + '\n\n';
+        txt += 'Town name: ' + res.townname + '\n';
+        txt += 'Player name: ' + res.playername + '\n\n';
+        txt += 'Item name: ' + itemname + '\n\n';
+        txt += 'Code type: ' + res.passtype + '\n\n';
+        txt += 'Output data hex:\n';
+        txt += res.data.map(x => x.toString(16).padStart(2,'0')).join(' ') + '\n';
         out.textContent = txt;
       } catch (err) {
         out.textContent = 'Error: ' + err;
