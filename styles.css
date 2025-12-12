@@ -5,6 +5,13 @@
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
 }
+@font-face {
+  font-family: 'FinkHeavy'; /* A name for your font */
+  src: url('./FinkHeavy.ttf') format('truetype'); 
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; /* Prevents invisible text while loading */
+}
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin: 12px;
@@ -25,5 +32,5 @@ main { max-width:1000px; margin:8px auto; }
 .link-card a { font-weight:600; color:#0b66c3; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
 header small { display:block; color:#666; margin-top:6px; }
-footer { margin-top:18px; color:#666; font-size:0.9rem; }
+footer { font-family: Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
   
