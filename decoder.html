@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Animal Crossing Trade Code Decoder (client-side)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:18px auto;padding:10px}
+    .result{background:#efefef;padding:12px;margin-top:12px;white-space:pre-wrap}
+    label{display:block;margin:6px 0}
+  </style>
+</head>
+<body>
+  <h1>Animal Crossing Trade Code Decoder</h1>
+  <p>Paste a trade code below (use & when present) and click Decode. This runs fully in the browser.</p>
+  <form id="decform">
+    <textarea name="passcode" id="passcode" cols="45" rows="3" placeholder="Paste trade code here"></textarea><br>
+    <button type="submit">Decode</button>
+  </form>
+  <div id="result" class="result">No data collected.</div>
+
+  <script src="./mmpwd.js"></script>
+  <script src="./itemlist.js"></script>
+  <script>
+    const form = document.getElementById('decform');
+    const out = document.getElementById('result');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const code = document.getElementById('passcode').value.trim();
+      out.textContent = 'Decoding...';
+      try {
+        const res = window.mmpwd.decodeTradeCode(code);
+        if (res.error) {
+          out.textContent = res.error;
+          return;
+        }
+        const itemname = window.ac_itemlist[res.itemnum] || '???';
+        let txt = '';
+        txt += 'Original code:\\n' + res.original_code + '\\n\\n';
+        txt += 'Item Number: 0x' + res.itemnum.toString(16).padStart(4,'0') + '\\n';
+        txt += 'Code Byte 0: 0x' + res.codebyte0.toString(16).padStart(2,'0') + '\\n';
+        txt += 'Code Byte 1: 0x' + res.codebyte1.toString(16).padStart(2,'0') + '\\n';
+        txt += ' - Code Descriptor 0: 0x' + (res.modbyte0===undefined? '': res.modbyte0.toString(16).padStart(2,'0')) + '\\n';
+        txt += ' - Code Descriptor 1: 0x' + (res.modbyte1===undefined? '': res.modbyte1.toString(16).padStart(2,'0')) + '\\n';
+        txt += ' - Code Descriptor 2: 0x' + (res.modbyte2===undefined? '': res.modbyte2.toString(16).padStart(2,'0')) + '\\n';
+        txt += ' - Code Descriptor 3: 0x' + (res.modbyte3===undefined? '': res.modbyte3.toString(16).padStart(2,'0')) + '\\n';
+        txt += ' - Code Descriptor 4: 0x' + (res.modbyte4===undefined? '': res.modbyte4.toString(16).padStart(2,'0')) + '\\n\\n';
+        txt += 'Town name: ' + res.townname + '\\n';
+        txt += 'Player name: ' + res.playername + '\\n\\n';
+        txt += 'Item name: ' + itemname + '\\n\\n';
+        txt += 'Code type: ' + res.passtype + '\\n\\n';
+        txt += 'Output data hex:\\n';
+        txt += res.data.map(x => x.toString(16).padStart(2,'0')).join(' ') + '\\n';
+        out.textContent = txt;
+      } catch (err) {
+        out.textContent = 'Error: ' + err;
+      }
+    });
+  </script>
+</body>
+</html>
