@@ -17,25 +17,25 @@
   font-display: swap; /* Prevents invisible text while loading */
 }
 @font-face {
-  font-family: 'FOT-Humming'; /* A name for your font */
-  src: url('./FOT-Humming.woff2') format('woff2'),
-       url('./FOT-Humming.woff') format('woff'),
-       url('./FOT-Humming.otf') format('opentype'); 
+  font-family: 'Animal-Crossing-Wild-World'; /* A name for your font */
+  src: url('./Animal-Crossing-Wild-World.woff2') format('woff2'),
+       url('./Animal-Crossing-Wild-World.woff') format('woff'),
+       url('./Animal-Crossing-Wild-World.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
 }
 @font-face {
-  font-family: 'FOT-Humming'; /* A name for your font */
-  src: url('./FOT-Humming.woff2') format('woff2'),
-       url('./FOT-Humming.woff') format('woff'),
-       url('./FOT-Humming.otf') format('opentype'); 
+  font-family: 'Animal-Crossing-Wild-World'; /* A name for your font */
+  src: url('./Animal-Crossing-Wild-World.woff2') format('woff2'),
+       url('./Animal-Crossing-Wild-World.woff') format('woff'),
+       url('./Animal-Crossing-Wild-World.ttf') format('truetype'); 
   font-weight: bold;
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
 }
 body {
-  font-family: "FOT-Humming", Helvetica, Arial, sans-serif;
+  font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif;
   margin: 12px;
   color: #111;
 }
@@ -51,8 +51,8 @@ input[type="text"], textarea, select { width:100%; max-width:520px; padding:6px;
 main { max-width:1000px; margin:8px auto; }
 .link-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:12px; }
 .link-card { padding:14px; border:1px solid #ddd; border-radius:8px; background:#fafafa; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
-.link-card a { font-weight:600; color:#0b66c3; text-decoration:none; }
+.link-card a { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; font-weight:bold; color:#0b66c3; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
-header small { display:block; color:#666; margin-top:6px; }
-footer { font-family: "FOT-Humming", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
+header small { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; display:block; color:#666; margin-top:6px; }
+footer { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
   
