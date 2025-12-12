@@ -30,12 +30,12 @@ nav { margin-left:auto; }
 .panel.hidden { display:none; }
 label { display:block; margin:8px 0; }
 input[type="text"], textarea, select { width:100%; max-width:520px; padding:6px; box-sizing:border-box; }
-.result { margin-top:12px; padding:8px; background:#f5f5f5; border-radius:6px; border:1px solid #ddd; white-space:pre-wrap; font-family: monospace; }
+.result { margin-top:12px; padding:8px; background:#21826a; border-radius:12px; border:1px solid #d9fff2; white-space:pre-wrap; font-family: monospace; }
 main { max-width:1000px; margin:8px auto; }
 .link-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:12px; }
-.link-card { padding:14px; border:1px solid #ddd; border-radius:8px; background:#fafafa; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
-.link-card a { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; font-weight:bold; color:#0b66c3; text-decoration:none; }
-.link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
+.link-card { padding:14px; border:1px solid #d9fff2; border-radius:16px; background:#21826a; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+.link-card a { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; font-weight:bold; color:#fff79c; text-decoration:none; }
+.link-card p { margin:8px 0 0 0; color:#d9fff2; font-size:0.95rem; }
 header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#d9fff2; margin-top:6px; }
 header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#d9fff2; font-size:0.9rem; }
 footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#d9fff2; font-size:0.9rem; }
@@ -43,4 +43,4 @@ footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margi
 .note-nothing { color: #7a7a7a; font-style: italic; }
 .note-special { color: #0b5; }
 table { border-collapse: collapse; }
-table th, table td { padding: 6px; border: 1px solid #ddd; }
+table th, table td { padding: 6px; border: 1px solid #d9fff2; background:#21826a; }
