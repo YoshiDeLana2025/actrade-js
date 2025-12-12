@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Animal Crossing Trade Code Generator (client-side)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:18px auto;padding:10px}
+    label{display:block;margin:6px 0}
+    .result{background:#efefef;padding:12px;margin-top:12px;white-space:pre-wrap}
+  </style>
+</head>
+<body>
+  <h1>Animal Crossing Trade Code Generator (client-side)</h1>
+  <p>Generate trade codes in the browser. This page replaces codegenp.php entirely.</p>
+
+  <form id="genform">
+    <label>Code type:
+      <select name="codetype" id="codetype">
+        <option value="P">Player-to-Player</option>
+        <option value="N">NES Contest</option>
+        <option value="U">Universal</option>
+        <option value="C">Custom</option>
+      </select>
+    </label>
+    <label>Item number: <input type="text" id="itemnum" name="itemnum" placeholder="decimal or 0xHEX"></label>
+    <label>Townname: <input type="text" id="townname" name="townname" maxlength="8"></label>
+    <label>Playername: <input type="text" id="playername" name="playername" maxlength="8"></label>
+    <label><input type="checkbox" id="leadspace" name="leadspace"> Add leading space</label>
+    <label>*Custom algorithm (used only with Custom):</label>
+    <textarea id="custom" cols="60" rows="4" placeholder="&lt;bit operator&gt;=&lt;numeric value&gt;"></textarea><br>
+    <button type="submit">Generate</button>
+  </form>
+
+  <div id="result" class="result">No data collected.</div>
+
+  <script src="./mmpwd.js"></script>
+  <script>
+    const form = document.getElementById('genform');
+    const result = document.getElementById('result');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const codetype = document.getElementById('codetype').value;
+      const itemnum = document.getElementById('itemnum').value.trim();
+      const townname = document.getElementById('townname').value || '';
+      const playername = document.getElementById('playername').value || '';
+      const leadspace = document.getElementById('leadspace').checked;
+      const custom = document.getElementById('custom').value || '';
+      result.textContent = 'Generating...';
+      try {
+        const out = window.mmpwd.encodeTradeCode({ codetype, itemnum, playername, townname, leadspace, custom });
+        if (out.error) { result.textContent = out.error; return; }
+        // Format output similar to original: display split after 14 chars
+        const final = out.finalCode;
+        const displayed = final.slice(0,14) + '\\n' + final.slice(14);
+        let txt = 'Trade Code:\\n' + displayed + '\\n\\n';
+        txt += 'Raw (28 chars):\\n' + out.raw28 + '\\n';
+        result.textContent = txt;
+      } catch (err) {
+        result.textContent = 'Error generating: ' + err;
+      }
+    });
+  </script>
+</body>
+</html>
