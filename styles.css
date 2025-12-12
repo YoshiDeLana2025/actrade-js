@@ -54,5 +54,6 @@ main { max-width:1000px; margin:8px auto; }
 .link-card a { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; font-weight:bold; color:#0b66c3; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
 header small { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; display:block; color:#666; margin-top:6px; }
+header p { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; color:#666; font-size:0.9rem; }
 footer { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
   
