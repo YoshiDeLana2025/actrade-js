@@ -39,7 +39,7 @@ body {
   margin: 12px;
   color: #111;
 }
-header { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; display:flex; align-items:center; flex-wrap:wrap; }
+header { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; }
 nav { margin-left:auto; }
 .tab { padding:8px 12px; margin:2px; border-radius:6px; border:1px solid #ccc; background:#f6f6f6; cursor:pointer; }
 .tab.active { background:#e3f2fd; border-color:#90caf9; }
