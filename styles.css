@@ -43,4 +43,5 @@ footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margi
 .note-nothing { color: #7a7a7a; font-style: italic; }
 .note-special { color: #0b5; }
 table { border-collapse: collapse; }
-table th, table td { padding: 6px; border: 1px solid #d9fff2; background:#21826a; }
+table th { padding: 6px; border: 1px solid #d9fff2; background:#21826a; }
+table td { padding: 6px; border: 1px solid #d9fff2; background:#37b897; }
