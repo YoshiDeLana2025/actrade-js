@@ -17,25 +17,16 @@
   font-display: swap; /* Prevents invisible text while loading */
 }
 @font-face {
-  font-family: 'Animal-Crossing-Wild-World'; /* A name for your font */
-  src: url('./Animal-Crossing-Wild-World.woff2') format('woff2'),
-       url('./Animal-Crossing-Wild-World.woff') format('woff'),
-       url('./Animal-Crossing-Wild-World.ttf') format('truetype'); 
+  font-family: 'SCE-PS3-Rodin-Latin'; /* A name for your font */
+  src: url('./SCE-PS3-Rodin-Latin.woff2') format('woff2'),
+       url('./SCE-PS3-Rodin-Latin.woff') format('woff'),
+       url('./SCE-PS3-Rodin-Latin.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
 }
-@font-face {
-  font-family: 'Animal-Crossing-Wild-World'; /* A name for your font */
-  src: url('./Animal-Crossing-Wild-World.woff2') format('woff2'),
-       url('./Animal-Crossing-Wild-World.woff') format('woff'),
-       url('./Animal-Crossing-Wild-World.ttf') format('truetype'); 
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; /* Prevents invisible text while loading */
-}
 body {
-  font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif;
+  font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif;
   margin: 12px;
   color: #111;
 }
@@ -53,9 +44,9 @@ main { max-width:1000px; margin:8px auto; }
 .link-card { padding:14px; border:1px solid #ddd; border-radius:8px; background:#fafafa; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
 .link-card a { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; font-weight:bold; color:#0b66c3; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#444; font-size:0.95rem; }
-header small { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; display:block; color:#666; margin-top:6px; }
-header p { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; color:#666; font-size:0.9rem; }
-footer { font-family: "Animal-Crossing-Wild-World", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
+header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#666; margin-top:6px; }
+header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#666; font-size:0.9rem; }
+footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#666; font-size:0.9rem; }
 .note-glitch { color: #b45f00; font-weight: bold; }
 .note-nothing { color: #7a7a7a; font-style: italic; }
 .note-special { color: #0b5; }
