@@ -40,9 +40,9 @@
         // Nintendo Power code variant: player="Power", town="Nintendo", leadspace=true
         const nintendoPower = window.ACTrade.createPassword("Power", "Nintendo", itemnum, "U", true, "");
         const box = document.createElement('div');
-        box.style.border = '1px solid #ddd';
         box.style.padding = '6px';
         box.style.margin = '6px 0';
+        box.classList.add('databox');
         box.innerHTML = `<b>${k} (${itemnum}) - ${name}</b><br><b>Nintendo:</b> <code>${nintendo}</code><br><b>Nintendo Power:</b> <code>${nintendoPower}</code>`;
         results.appendChild(box);
       }
