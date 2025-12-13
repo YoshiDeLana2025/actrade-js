@@ -35,6 +35,7 @@ input[type="text"] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-
 input[type="number"] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAA9E; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
 input[type="submit"] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #C5FFED; color: #5FAAFE; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
 button { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #C5FFED; color: #5FAAFE; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
+textarea { font-family: monospace; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAAFE; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
 .result { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; white-space:pre-wrap; font-family: monospace; }
 .databox { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; }
 main { max-width:1000px; margin:8px auto; }
