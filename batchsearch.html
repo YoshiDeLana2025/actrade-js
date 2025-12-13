@@ -59,6 +59,7 @@
         } else {
           // printable simple block
           const block = document.createElement('pre');
+          block.classList.add('databox')
           block.textContent = `Item: ${itemName}\nNumber: ${keyHex} (${key})\nNintendo\n${nintendo}\nNintendo Power\n${nintendoPower}\n\n`;
           output.appendChild(block);
         }
