@@ -31,7 +31,7 @@ nav { margin-left:auto; }
 .panel { margin-top:12px; }
 .panel.hidden { display:none; }
 label { display:block; margin:8px 0; }
-input[type="text"], textarea, select { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #C5FFED; color: #5FAA9E;}
+input[type="text"], textarea, select { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAA9E; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED;}
 .result { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; white-space:pre-wrap; font-family: monospace; }
 .databox { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; }
 main { max-width:1000px; margin:8px auto; }
@@ -46,5 +46,5 @@ footer { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; margi
 .note-nothing { color: #ffb0b0; font-style: italic; }
 .note-special { color: #d9fff2; }
 table { border-collapse: collapse; }
-table th { padding: 6px; border: 1px solid #d9fff2; background:#58A096; }
-table td { padding: 6px; border: 1px solid #d9fff2; background:#5FAA9E; }
+table th { padding: 6px; border: 1px solid #C5FFED; background:#58A096; }
+table td { padding: 6px; border: 1px solid #C5FFED; background:#5FAA9E; }
