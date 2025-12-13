@@ -39,9 +39,9 @@ main { max-width:1000px; margin:8px auto; }
 header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#d9fff2; margin-top:6px; }
 header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#d9fff2; font-size:0.9rem; }
 footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#d9fff2; font-size:0.9rem; }
-.note-glitch { color: #b45f00; font-weight: bold; }
-.note-nothing { color: #7a7a7a; font-style: italic; }
-.note-special { color: #0b5; }
+.note-glitch { color: #f7d4ad; font-weight: bold; }
+.note-nothing { color: #ffb0b0; font-style: italic; }
+.note-special { color: #d9fff2; }
 table { border-collapse: collapse; }
 table th { padding: 6px; border: 1px solid #d9fff2; background:#21826a; }
 table td { padding: 6px; border: 1px solid #d9fff2; background:#37b897; }
