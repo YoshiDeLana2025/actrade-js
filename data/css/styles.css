@@ -17,31 +17,31 @@
   font-display: swap; /* Prevents invisible text while loading */
 }
 body {
-  font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif;
+  font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif;
   margin: 12px;
   color: #C5FFED;
   background-color: #79CAC4;
   background-image: url("../img/pattern.png"); 
   background-repeat: repeat;
 }
-header { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; color:#fff79c; }
+header { font-family: "FinkHeavy", Arial, Helvetica, sans-serif; color:#fff79c; }
 nav { margin-left:auto; }
 .tab { padding:8px 12px; margin:2px; border-radius:6px; border:1px solid #ccc; background:#f6f6f6; cursor:pointer; }
 .tab.active { background:#e3f2fd; border-color:#90caf9; }
 .panel { margin-top:12px; }
 .panel.hidden { display:none; }
 label { display:block; margin:8px 0; }
-input[type="text"], textarea, select { width:100%; max-width:520px; padding:6px; box-sizing:border-box; }
+input[type="text"], textarea, select { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #C5FFED; color: #5FAA9E;}
 .result { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; white-space:pre-wrap; font-family: monospace; }
 .databox { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; }
 main { max-width:1000px; margin:8px auto; }
 .link-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:12px; }
 .link-card { padding:14px; border:1px solid #C5FFED; border-radius:16px; background:#5FAA9E; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
-.link-card a { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; font-weight:bold; color:#fff79c; text-decoration:none; }
+.link-card a { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; font-weight:bold; color:#fff79c; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#C5FFED; font-size:0.95rem; }
-header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#C5FFED; margin-top:6px; }
-header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#C5FFED; font-size:0.9rem; }
-footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#C5FFED; font-size:0.9rem; }
+header small { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; display:block; color:#C5FFED; margin-top:6px; }
+header p { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; color:#C5FFED; font-size:0.9rem; }
+footer { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; margin-top:18px; color:#C5FFED; font-size:0.9rem; }
 .note-glitch { color: #f7d4ad; font-weight: bold; }
 .note-nothing { color: #ffb0b0; font-style: italic; }
 .note-special { color: #d9fff2; }
