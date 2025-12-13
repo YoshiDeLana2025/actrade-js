@@ -38,9 +38,9 @@ main { max-width:1000px; margin:8px auto; }
 .link-card { padding:14px; border:1px solid #C5FFED; border-radius:16px; background:#5FAA9E; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
 .link-card a { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; font-weight:bold; color:#fff79c; text-decoration:none; }
 .link-card p { margin:8px 0 0 0; color:#C5FFED; font-size:0.95rem; }
-header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#99E6CA; margin-top:6px; }
-header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#99E6CA; font-size:0.9rem; }
-footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#99E6CA; font-size:0.9rem; }
+header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#C5FFED; margin-top:6px; }
+header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#C5FFED; font-size:0.9rem; }
+footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#C5FFED; font-size:0.9rem; }
 .note-glitch { color: #f7d4ad; font-weight: bold; }
 .note-nothing { color: #ffb0b0; font-style: italic; }
 .note-special { color: #d9fff2; }
