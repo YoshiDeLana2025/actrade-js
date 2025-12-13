@@ -19,8 +19,8 @@
 body {
   font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif;
   margin: 12px;
-  color: #d9fff2;
-  background-color: #75c9a6;
+  color: #C5FFED;
+  background-color: #79CAC4;
   background-image: url("./pattern.png"); 
   background-repeat: repeat;
 }
@@ -32,18 +32,18 @@ nav { margin-left:auto; }
 .panel.hidden { display:none; }
 label { display:block; margin:8px 0; }
 input[type="text"], textarea, select { width:100%; max-width:520px; padding:6px; box-sizing:border-box; }
-.result { margin-top:12px; padding:8px; background:#21826a; border-radius:12px; border:1px solid #d9fff2; white-space:pre-wrap; font-family: monospace; }
+.result { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; white-space:pre-wrap; font-family: monospace; }
 main { max-width:1000px; margin:8px auto; }
 .link-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:12px; }
-.link-card { padding:14px; border:1px solid #d9fff2; border-radius:16px; background:#21826a; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+.link-card { padding:14px; border:1px solid #C5FFED; border-radius:16px; background:#5FAA9E; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
 .link-card a { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; font-weight:bold; color:#fff79c; text-decoration:none; }
-.link-card p { margin:8px 0 0 0; color:#d9fff2; font-size:0.95rem; }
-header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#d9fff2; margin-top:6px; }
-header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#d9fff2; font-size:0.9rem; }
-footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#d9fff2; font-size:0.9rem; }
+.link-card p { margin:8px 0 0 0; color:#C5FFED; font-size:0.95rem; }
+header small { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; display:block; color:#99E6CA; margin-top:6px; }
+header p { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; color:#99E6CA; font-size:0.9rem; }
+footer { font-family: "SCE-PS3-Rodin-Latin", Helvetica, Arial, sans-serif; margin-top:18px; color:#99E6CA; font-size:0.9rem; }
 .note-glitch { color: #f7d4ad; font-weight: bold; }
 .note-nothing { color: #ffb0b0; font-style: italic; }
 .note-special { color: #d9fff2; }
 table { border-collapse: collapse; }
-table th { padding: 6px; border: 1px solid #d9fff2; background:#21826a; }
-table td { padding: 6px; border: 1px solid #d9fff2; background:#37b897; }
+table th { padding: 6px; border: 1px solid #d9fff2; background:#58A096; }
+table td { padding: 6px; border: 1px solid #d9fff2; background:#5FAA9E; }
