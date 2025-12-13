@@ -32,6 +32,7 @@ nav { margin-left:auto; }
 .panel.hidden { display:none; }
 label { display:block; margin:8px 0; }
 input { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAA9E; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
+input[type='checkbox'] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif;}
 input[type="text"] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAA9E; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
 input[type="number"] { font-family: "SCE-PS3-Rodin-Latin", Arial, Helvetica, sans-serif; width:100%; max-width:520px; padding:6px; box-sizing:border-box; background-color: #5FAA9E; color: #C5FFED; border-radius:12px; border:1px solid #C5FFED; padding: 12px;}
 .result { margin-top:12px; padding:8px; background:#5FAA9E; border-radius:12px; border:1px solid #C5FFED; white-space:pre-wrap; font-family: monospace; }
