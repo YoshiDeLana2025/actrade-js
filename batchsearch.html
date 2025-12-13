@@ -51,9 +51,9 @@
         const nintendoPower = window.ACTrade.createPassword("Power", "Nintendo", key, "U", true, "");
         if (!printable) {
           const tr = document.createElement('div');
-          tr.style.border = '1px solid #eee';
           tr.style.padding = '6px';
           tr.style.margin = '3px 0';
+          tr.classList.add('databox');
           tr.innerHTML = `<b>${key} / ${keyHex}</b> — ${itemName}<br><b>Nintendo:</b> <code>${nintendo}</code><br><b>Nintendo Power:</b> <code>${nintendoPower}</code>`;
           output.appendChild(tr);
         } else {
