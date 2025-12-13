@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'FinkHeavy'; /* A name for your font */
-  src: url('data/font/FinkHeavy.woff2') format('woff2'),
-       url('data/font/FinkHeavy.woff') format('woff'),
-       url('data/font/FinkHeavy.ttf') format('truetype'); 
+  src: url('../font/FinkHeavy.woff2') format('woff2'),
+       url('../font/FinkHeavy.woff') format('woff'),
+       url('../font/FinkHeavy.ttf') format('truetype'); 
   font-weight: bold;
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
 }
 @font-face {
   font-family: 'SCE-PS3-Rodin-Latin'; /* A name for your font */
-  src: url('data/font/SCE-PS3-Rodin-Latin.woff2') format('woff2'),
-       url('data/font/SCE-PS3-Rodin-Latin.woff') format('woff'),
-       url('data/fint/SCE-PS3-Rodin-Latin.ttf') format('truetype'); 
+  src: url('../font/SCE-PS3-Rodin-Latin.woff2') format('woff2'),
+       url('../font/SCE-PS3-Rodin-Latin.woff') format('woff'),
+       url('../font/SCE-PS3-Rodin-Latin.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Prevents invisible text while loading */
@@ -21,7 +21,7 @@ body {
   margin: 12px;
   color: #C5FFED;
   background-color: #79CAC4;
-  background-image: url("data/img/pattern.png"); 
+  background-image: url("../img/pattern.png"); 
   background-repeat: repeat;
 }
 header { font-family: "FinkHeavy", Helvetica, Arial, sans-serif; color:#fff79c; }
